@@ -1,6 +1,6 @@
 # Sistema de Monitoramento do Rio Una — Palmares
 
-## 📌 Sobre o projeto
+## Sobre o projeto
 
 Este projeto consiste em um software simples de **monitoramento preventivo do Rio Una**, desenvolvido pensando no contexto de **Palmares**.
 
@@ -8,7 +8,7 @@ O sistema tem como objetivo acompanhar, de forma simulada, o nível do rio e inf
 
 A proposta busca contribuir para o acompanhamento das condições do Rio Una e, ao mesmo tempo, demonstrar a utilização de ferramentas de **Git e GitHub/GitLab**, com organização de commits, branches, Pull Requests, revisões e releases.
 
-## 🎯 Problema local
+## Problema local
 
 O projeto está relacionado ao monitoramento do **Rio Una em Palmares**, permitindo acompanhar alterações no nível da água.
 
@@ -22,7 +22,7 @@ A solução apresenta informações como:
 
 Os dados utilizados podem ser **simulados**, não sendo necessária a utilização de sensores reais.
 
-## ⚙️ Como utilizar
+## Como utilizar
 
 Para executar o projeto, é necessário ter um computador com acesso ao repositório e às ferramentas utilizadas no desenvolvimento.
 
@@ -33,7 +33,7 @@ Para executar o projeto, é necessário ter um computador com acesso ao reposit�
 3. Execute o sistema conforme as instruções do código.
 4. Utilize os dados simulados para visualizar o monitoramento do Rio Una.
 
-## 🤝 Padrões de contribuição
+## Padrões de contribuição
 
 Para contribuir com o projeto, é necessário manter a organização do repositório.
 
@@ -46,7 +46,7 @@ As contribuições devem seguir estas regras:
 * Corrigir possíveis conflitos antes da integração;
 * Manter o código e a documentação organizados.
 
-## 🌿 Política de ramificação
+##  Política de ramificação
 
 O projeto utiliza branches para organizar o desenvolvimento e evitar alterações diretamente na versão principal.
 
@@ -54,9 +54,9 @@ Cada integrante deve trabalhar em sua própria branch para desenvolver suas tare
 
 Essa organização permite acompanhar a evolução do projeto e manter um histórico de versionamento organizado.
 
-## 👥 Equipe
+## Equipe
 
 * **Lívia:** Desenvolvimento e funcionalidades do sistema.
 * **Isabel:** README e documentação.
 * **Vinícius:** Git e versionamento.
-* **Líder:** Organização e apresentação.
+* **Isabella:** Organização e apresentação.
