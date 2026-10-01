@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monitoramento do Rio Una | Palmares</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="topo">
+
+        <div class="topo-conteudo">
+
+            <div class="logo">
+
+                <div class="logo-icone">
+                    RU
+                </div>
+
+                <div>
+                    <h1>Rio Una</h1>
+                    <span>Monitoramento preventivo</span>
+                </div>
+
+            </div>
+
+            <div class="acoes-topo">
+
+                <div class="localizacao">
+                    Palmares - PE
+                </div>
+
+                <button id="botaoTema" class="botao-tema">
+                    Modo escuro
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO -->
+    <main class="container">
+
+        <!-- INTRODUÇÃO -->
+        <section class="introducao">
+
+            <div>
+
+                <span class="tag">
+                    MONITORAMENTO
+                </span>
+
+                <h2>
+                    Monitoramento do Rio Una
+                </h2>
+
+                <p>
+                    Acompanhe o nível do Rio Una e a situação
+                    atual do monitoramento em Palmares.
+                </p>
+
+            </div>
+
+            <div class="status-online">
+                <span></span>
+                Sistema ativo
+            </div>
+
+        </section>
+
+
+        <!-- CARDS -->
+        <section class="cards">
+
+            <!-- NÍVEL -->
+            <div class="card">
+
+                <div class="card-topo">
+
+                    <span>
+                        Nível atual
+                    </span>
+
+                    <span class="icone-card">
+                        NIV
+                    </span>
+
+                </div>
+
+                <div class="nivel" id="nivelAtual">
+                    2,8 m
+                </div>
+
+                <p class="descricao">
+                    Nível registrado na última medição
+                </p>
+
+            </div>
+
+
+            <!-- SITUAÇÃO -->
+            <div class="card">
+
+                <div class="card-topo">
+
+                    <span>
+                        Situação
+                    </span>
+
+                    <span class="icone-card">
+                        SIT
+                    </span>
+
+                </div>
+
+                <div class="situacao atencao" id="situacao">
+                    Atenção
+                </div>
+
+                <p class="descricao">
+                    Classificação atual do monitoramento
+                </p>
+
+            </div>
+
+
+            <!-- LOCAL -->
+            <div class="card">
+
+                <div class="card-topo">
+
+                    <span>
+                        Ponto monitorado
+                    </span>
+
+                    <span class="icone-card">
+                        LOC
+                    </span>
+
+                </div>
+
+                <div class="ponto">
+                    Rio Una
+                </div>
+
+                <p class="descricao">
+                    Palmares - Pernambuco
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- GRÁFICO -->
+        <section class="painel">
+
+            <div class="painel-cabecalho">
+
+                <div>
+
+                    <h3>
+                        Nível do Rio
+                    </h3>
+
+                    <p>
+                        Evolução das últimas medições
+                    </p>
+
+                </div>
+
+                <span class="icone-painel">
+                    DADOS
+                </span>
+
+            </div>
+
+
+            <div class="grafico-container">
+
+                <svg
+                    id="grafico"
+                    viewBox="0 0 800 320"
+                    preserveAspectRatio="none"
+                >
+
+                    <line
+                        x1="70"
+                        y1="40"
+                        x2="770"
+                        y2="40"
+                        class="linha-grade"
+                    />
+
+                    <line
+                        x1="70"
+                        y1="110"
+                        x2="770"
+                        y2="110"
+                        class="linha-grade"
+                    />
+
+                    <line
+                        x1="70"
+                        y1="180"
+                        x2="770"
+                        y2="180"
+                        class="linha-grade"
+                    />
+
+                    <line
+                        x1="70"
+                        y1="250"
+                        x2="770"
+                        y2="250"
+                        class="linha-grade"
+                    />
+
+                    <text
+                        x="10"
+                        y="45"
+                        class="texto-eixo"
+                    >
+                        3,5 m
+                    </text>
+
+                    <text
+                        x="10"
+                        y="115"
+                        class="texto-eixo"
+                    >
+                        3,0 m
+                    </text>
+
+                    <text
+                        x="10"
+                        y="185"
+                        class="texto-eixo"
+                    >
+                        2,5 m
+                    </text>
+
+                    <text
+                        x="10"
+                        y="255"
+                        class="texto-eixo"
+                    >
+                        2,0 m
+                    </text>
+
+                    <polyline
+                        id="linhaGrafico"
+                        points=""
+                        class="linha-grafico"
+                    ></polyline>
+
+                    <g id="pontosGrafico"></g>
+
+                    <g id="horariosGrafico"></g>
+
+                </svg>
+
+            </div>
+
+        </section>
+
+
+        <!-- HISTÓRICO E AVISOS -->
+        <section class="grid-conteudo">
+
+
+            <!-- HISTÓRICO -->
+            <div class="painel">
+
+                <div class="painel-cabecalho">
+
+                    <div>
+
+                        <h3>
+                            Últimas medições
+                        </h3>
+
+                        <p>
+                            Histórico dos dados registrados
+                        </p>
+
+                    </div>
+
+                    <span class="icone-painel">
+                        HIST
+                    </span>
+
+                </div>
+
+                <div
+                    class="historico"
+                    id="historico"
+                ></div>
+
+            </div>
+
+
+            <!-- AVISOS -->
+            <div class="painel">
+
+                <div class="painel-cabecalho">
+
+                    <div>
+
+                        <h3>
+                            Avisos
+                        </h3>
+
+                        <p>
+                            Informações importantes
+                        </p>
+
+                    </div>
+
+                    <span class="icone-painel">
+                        AVISO
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="aviso"
+                    id="aviso"
+                >
+
+                    <div class="aviso-icone">
+                        !
+                    </div>
+
+                    <div>
+
+                        <strong id="tituloAviso">
+                            Nível em elevação
+                        </strong>
+
+                        <p id="textoAviso">
+                            O nível registrado apresenta elevação
+                            nas últimas medições.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ATUALIZAÇÃO -->
+        <section class="atualizacao">
+
+            <div>
+
+                <span class="atualizacao-titulo">
+                    Última atualização
+                </span>
+
+                <strong id="horarioAtualizacao">
+                    12:00
+                </strong>
+
+            </div>
+
+
+            <button id="botaoAtualizar">
+                Atualizar monitoramento
+            </button>
+
+        </section>
+
+
+        <!-- INFORMAÇÃO -->
+        <section class="informacao">
+
+            <div class="informacao-icone">
+                i
+            </div>
+
+            <div>
+
+                <strong>
+                    Dados simulados
+                </strong>
+
+                <p>
+                    Este sistema utiliza dados simulados para fins
+                    acadêmicos e demonstração do funcionamento
+                    do monitoramento.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <strong>
+            Monitoramento do Rio Una
+        </strong>
+
+        <span>
+            Projeto acadêmico • Palmares - PE
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
